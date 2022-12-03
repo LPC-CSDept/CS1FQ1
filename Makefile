@@ -1,6 +1,6 @@
 all: clean test
-programtest: tests.cpp Q92.cpp 
-	g++ -fsanitize=address --std=c++17 tests.cpp Q92.cpp -o programtest 
+programtest: tests.cpp q1.cpp 
+	g++ -fsanitize=address --std=c++17 tests.cpp q1.cpp -o programtest 
 test: programtest 
 	./programtest
 clean:

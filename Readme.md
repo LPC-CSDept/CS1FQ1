@@ -5,14 +5,14 @@
 
 ---
 
-### Quiz 9: Question 2
+### Final Exam Question 1
 
-### Complete the "Q92.cpp"
+### Complete the "q1.cpp"
 
 > Complete functions <br>
 
-> > To run "main.hpp" locally, you can use the "main.cpp". <br>
-> > g++ --std=c++17 main.cpp Q92.cpp<br>
+> > To run "q1.cpp" locally, you can use the "main.cpp". <br>
+> > g++ --std=c++17 main.cpp q1.cpp<br>
 > > ./a.out
 
 <!--
