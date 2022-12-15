@@ -2,6 +2,8 @@
 
 Student *makeStudent(int N)
 {
+
+	return ptr;
 }
 
 void printStudent(Student *ptr, int N)
@@ -23,6 +25,6 @@ void printStudent(Student *ptr, int N)
 		cout << endl;
 	}
 }
-void sortStudent(Student *ptr, int N)
+void sortStudent(Student *ptr, int N, string field, int asc)
 {
 }

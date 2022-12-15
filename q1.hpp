@@ -21,6 +21,6 @@ struct Student
 };
 void printStudent(Student *, int);
 Student *makeStudent(int);
-void sortStudent(Student *, int);
+void sortStudent(Student *, int, string, int);
 
 #endif

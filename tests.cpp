@@ -65,53 +65,140 @@ TEST_CASE("Ex1 makeStudent() ", "[example]")
 	cout << endl;
 }
 
-TEST_CASE("Ex2 makeStudent() ", "[example]")
+TEST_CASE("Ex2 sortStudent(name ascending) ", "[example]")
 {
-	/*
-	Alfred
-	     Alfalfa
-	      Rubble
-	      Backus
-	     Bumpkin
-	     Airpump
-	    Franklin
-	    Elephant
-	       Gerty
-	   Carnivore
-	     Android
-		Buff
-	       Dandy
-	   Heffalump
-	      Noshow
-	      George
-	*/
 	const int N = 16;
 	string fnames[N] = {
-	    "Alfred",
-	    "Alfalfa",
-	    "Rubble",
-	    "Backus",
-	    "Bumpkin",
-	    "Airpump",
-	    "Franklin",
-	    "Elephant",
-	    "Gerty",
-	    "Carnivore",
-	    "Android",
-	    "Buff",
-	    "Dandy",
-	    "Heffalump",
-	    "Noshow",
-	    "George"};
+		"Alfalfa",
+		"Airpump",
+		"Carnivore",
+		"Franklin",
+		"Rubble",
+		"Buff",
+		"George",
+		"Noshow",
+		"Android",
+		"Bumpkin",
+		"Gerty",
+		"Heffalump",
+		"Elephant",
+		"Backus",
+		"Dandy",
+		"Alfred"};
 
 	Student *ptr;
 	ptr = makeStudent(N);
-	sortStudent(ptr, N);
+	sortStudent(ptr, N, "name", 1);
 	INFO("Student's name must be same as the list of names\n");
 	for (int i = 0; i < N; i++)
 	{
 		// string target = (ptr + i)->first;
-		cout << setw(20) << right << (ptr + i)->first << "\n";
+		cout << setw(20) << right << (ptr + i)->first << setw(20) << right << (ptr + i)->last << "\n";
+		REQUIRE((ptr + i)->first == fnames[i]);
+		// REQUIRE(target == fnames[i]);
+	}
+	cout << endl;
+}
+
+TEST_CASE("Ex3 sortStudent(name descending) ", "[example]")
+{
+	const int N = 16;
+	string fnames[N] = {
+		"Alfred",
+		"Dandy",
+		"Backus",
+		"Elephant",
+		"Heffalump",
+		"Gerty",
+		"Bumpkin",
+		"Android",
+		"Noshow",
+		"George",
+		"Buff",
+		"Rubble",
+		"Franklin",
+		"Carnivore",
+		"Airpump",
+		"Alfalfa"};
+
+	Student *ptr;
+	ptr = makeStudent(N);
+	sortStudent(ptr, N, "name", 0);
+	INFO("Student's name must be same as the list of names\n");
+	for (int i = 0; i < N; i++)
+	{
+		// string target = (ptr + i)->first;
+		cout << setw(20) << right << (ptr + i)->first << right << setw(20) << (ptr + i)->last << "\n";
+		REQUIRE((ptr + i)->first == fnames[i]);
+		// REQUIRE(target == fnames[i]);
+	}
+	cout << endl;
+}
+
+TEST_CASE("Ex4 sortStudent(score ascending) ", "[example]")
+{
+	const int N = 16;
+	string fnames[N] = {
+		"George",
+		"Noshow",
+		"Heffalump",
+		"Dandy",
+		"Buff",
+		"Android",
+		"Carnivore",
+		"Gerty",
+		"Elephant",
+		"Franklin",
+		"Airpump",
+		"Bumpkin",
+		"Backus",
+		"Rubble",
+		"Alfalfa",
+		"Alfred"};
+
+	Student *ptr;
+	ptr = makeStudent(N);
+	sortStudent(ptr, N, "score", 1);
+	INFO("Student's name must be same as the list of names\n");
+	for (int i = 0; i < N; i++)
+	{
+		// string target = (ptr + i)->first;
+		cout << setw(20) << right << (ptr + i)->first << right << setw(20) << (ptr + i)->last << "\n";
+		REQUIRE((ptr + i)->first == fnames[i]);
+		// REQUIRE(target == fnames[i]);
+	}
+	cout << endl;
+}
+
+TEST_CASE("Ex5 sortStudent(score ascending) ", "[example]")
+{
+	const int N = 16;
+	string fnames[N] = {
+		"Alfred",
+		"Alfalfa",
+		"Rubble",
+		"Backus",
+		"Bumpkin",
+		"Airpump",
+		"Franklin",
+		"Elephant",
+		"Gerty",
+		"Carnivore",
+		"Android",
+		"Buff",
+		"Dandy",
+		"Heffalump",
+		"Noshow",
+		"George"};
+
+	Student *ptr;
+	ptr = makeStudent(N);
+	sortStudent(ptr, N, "score", 0);
+	INFO("Student's name must be same as the list of names\n");
+	for (int i = 0; i < N; i++)
+	{
+		// string target = (ptr + i)->first;
+		cout << setw(20) << right << (ptr + i)->first << right << setw(20) << (ptr + i)->last << "\n";
 		REQUIRE((ptr + i)->first == fnames[i]);
 		// REQUIRE(target == fnames[i]);
 	}
