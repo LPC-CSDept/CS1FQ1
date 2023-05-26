@@ -63,6 +63,7 @@ TEST_CASE("Ex1 makeStudent() ", "[example]")
 		i++;
 	}
 	cout << endl;
+	delete [] ptr;
 }
 
 TEST_CASE("Ex2 sortStudent(name ascending) ", "[example]")
@@ -98,6 +99,7 @@ TEST_CASE("Ex2 sortStudent(name ascending) ", "[example]")
 		// REQUIRE(target == fnames[i]);
 	}
 	cout << endl;
+		delete [] ptr;
 }
 
 TEST_CASE("Ex3 sortStudent(name descending) ", "[example]")
@@ -133,6 +135,7 @@ TEST_CASE("Ex3 sortStudent(name descending) ", "[example]")
 		// REQUIRE(target == fnames[i]);
 	}
 	cout << endl;
+		delete [] ptr;
 }
 
 TEST_CASE("Ex4 sortStudent(score ascending) ", "[example]")
@@ -168,6 +171,7 @@ TEST_CASE("Ex4 sortStudent(score ascending) ", "[example]")
 		// REQUIRE(target == fnames[i]);
 	}
 	cout << endl;
+		delete [] ptr;
 }
 
 TEST_CASE("Ex5 sortStudent(score ascending) ", "[example]")
@@ -203,4 +207,5 @@ TEST_CASE("Ex5 sortStudent(score ascending) ", "[example]")
 		// REQUIRE(target == fnames[i]);
 	}
 	cout << endl;
+		delete [] ptr;
 }
